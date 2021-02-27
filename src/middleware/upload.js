@@ -14,7 +14,7 @@ var storage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}-bezkoder-${file.originalname}`);
-  },
+  }
 });
 
 var uploadFile = multer({ storage: storage, fileFilter: imageFilter });
